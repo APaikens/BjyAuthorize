@@ -36,7 +36,8 @@
         "laminas/laminas-http":            "^2.14",
         "laminas/laminas-view":            "^2.12",
         "laminas/laminas-authentication":  "^2.7",
-        "laminas/laminas-cache":           "^3.1"
+        "laminas/laminas-cache":           "^3.1",
+        "laminas/laminas-cache-storage-adapter-memory": "^2.2"
     },
     "replace": {
         "laminas/laminas-cache-storage-adapter-apc": "*",
