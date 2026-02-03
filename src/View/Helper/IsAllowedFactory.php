@@ -25,7 +25,7 @@ class IsAllowedFactory implements FactoryInterface
      * @param array|null $options
      * @return IsAllowed
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         /* @var $authorize \BjyAuthorize\Service\Authorize */
         $authorize = $container->get(Authorize::class);
