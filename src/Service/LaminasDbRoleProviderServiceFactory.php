@@ -17,7 +17,7 @@ class LaminasDbRoleProviderServiceFactory implements FactoryInterface
      * {@inheritDoc}
      * @see \Laminas\ServiceManager\Factory\FactoryInterface::__invoke()
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         return new LaminasDb(
             $container->get('BjyAuthorize\Config')['role_providers'][LaminasDb::class],

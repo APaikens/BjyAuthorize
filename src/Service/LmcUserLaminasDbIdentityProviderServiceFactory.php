@@ -18,7 +18,7 @@ class LmcUserLaminasDbIdentityProviderServiceFactory implements FactoryInterface
      * {@inheritDoc}
      * @see \Laminas\ServiceManager\Factory\FactoryInterface::__invoke()
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         /* @var $tableGateway \Laminas\Db\TableGateway\TableGateway */
         $tableGateway = new TableGateway('user_role_linker', $container->get('lmcuser_laminas_db_adapter'));
