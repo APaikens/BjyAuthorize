@@ -16,7 +16,7 @@ class IdentityProviderServiceFactory implements FactoryInterface
      * {@inheritDoc}
      * @see \Laminas\ServiceManager\Factory\FactoryInterface::__invoke()
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         return $container->get($container->get('BjyAuthorize\Config')['identity_provider']);
     }
