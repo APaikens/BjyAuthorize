@@ -2,6 +2,9 @@
 
 namespace BjyAuthorize;
 
+use Laminas\Cache\Service\StorageAdapterFactoryInterface;
+
+
 return [
     'bjyauthorize' => [
         // default role for unauthenticated users
@@ -38,7 +41,7 @@ return [
         // Flag if cache should be enabled or not
         'cache_enabled'         => true,
 
-        // cache options have to be compatible with Laminas\Cache\StorageFactory::factory
+        // cache options have to be compatible with Laminas\Cache\StorageAdapterFactoryInterface::create
         'cache_options'         => [
             'adapter'   => 'memory',
             'plugins'   => [
@@ -86,6 +89,11 @@ return [
             Service\AuthorizeAwareServiceInitializer::class
         ],
     ],
+    'controller_plugins' => [
+        'factories' => [
+            'isAllowed' => Controller\Plugin\IsAllowedFactory::class
+        ],
+    ],
     'view_manager' => [
         'template_map' => [
             'error/403' => __DIR__ . '/../view/error/403.phtml',
@@ -93,10 +101,15 @@ return [
                 => __DIR__ . '/../view/laminas-developer-tools/toolbar/bjy-authorize-role.phtml',
         ],
     ],
+    'view_helpers' => [
+        'factories' => [
+            'isAllowed' => View\Helper\IsAllowedFactory::class,
+        ],
+    ],
     'laminas-developer-tools' => [
         'profiler' => [
             'collectors' => [
-                'bjy_authorize_role_collector' => 'BjyAuthorize\\Collector\\RoleCollector',
+                'bjy_authorize_role_collector' => Collector\RoleCollector::class,
             ],
         ],
         'toolbar' => [
