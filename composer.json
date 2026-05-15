@@ -34,7 +34,7 @@
         "laminas/laminas-eventmanager":    "^3.15",
         "laminas/laminas-servicemanager":  "^4.5.1",
         "laminas/laminas-http":            "^2.14",
-        "laminas/laminas-view":            "^2.23",
+        "laminas/laminas-view":            "dev-renovate/all-minor-patch",
         "laminas/laminas-authentication":  "^2.19",
         "laminas/laminas-cache":           "^4.3",
         "laminas/laminas-cache-storage-adapter-memory": "^3.2.0"
