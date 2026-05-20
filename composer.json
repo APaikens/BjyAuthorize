@@ -34,7 +34,7 @@
         "laminas/laminas-eventmanager":    "^3.15",
         "laminas/laminas-servicemanager":  "^3.24",
         "laminas/laminas-http":            "^2.14",
-        "laminas/laminas-view":            "dev-I-51993",
+        "laminas/laminas-view":            "^2.44.0",
         "laminas/laminas-authentication":  "^2.19",
         "laminas/laminas-cache":           "^3.14",
         "laminas/laminas-cache-storage-adapter-memory": "dev-I-51993 as 2.3.1"
